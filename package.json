@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/socoe/mykad.git#readme",
   "devDependencies": {
+    "typescript": "^5.0.0",
     "@babel/cli": "^7.25.7",
     "@babel/preset-env": "^7.25.7",
     "browserify": "^17.0.0",

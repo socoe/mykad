@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "typeRoots": ["./node_modules/@types", "./node_modules/mykad/dist"],
       "target": "ES6",                  // Specify ECMAScript target version
       "module": "CommonJS",             // Specify module code generation
       "moduleResolution": "node",       // Use Node.js-style resolution
