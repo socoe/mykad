@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wmthor/mykad.git"
+    "url": "git+https://github.com/socoe/mykad.git"
   },
   "keywords": [
     "mykad",
@@ -24,9 +24,9 @@
   "author": "Wei-Ming Thor <twm_npm@outlook.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wmthor/mykad/issues"
+    "url": "https://github.com/socoe/mykad.git/issues"
   },
-  "homepage": "https://github.com/wmthor/mykad#readme",
+  "homepage": "https://github.com/socoe/mykad.git#readme",
   "devDependencies": {
     "@babel/cli": "^7.25.7",
     "@babel/preset-env": "^7.25.7",
