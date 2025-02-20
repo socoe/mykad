@@ -9,20 +9,14 @@ The MyKad library provides tools to validate, parse, generate, and format Malays
 Using npm:
 
 ```bash
-npm install mykad
+npm install @socoe/mykad
 ```
 
 
 ## Importing
 
-```javascript
-const mykad = require('mykad');
-```
-
-## Browser
-
-```html
-<script src="browser/mykad.min.js"></script>
+```ts
+import {isValid, format} from '@socoe/mykad';
 ```
 
 ## Features
@@ -31,17 +25,17 @@ const mykad = require('mykad');
 
 MyKad numbers can be checked for validity. It ensures correct 12-digits, valid date of birth, and place of birth code.
 
-```javascript
-if (mykad.isValid('560224108354')) {
+```ts
+if (isValid('560224108354')) {
     console.log('Valid MyKad number');
 }
 
-if (mykad.isValid('560224-10-8354')) {
+if (isValid('560224-10-8354')) {
     console.log('Also valid...');
 }
 
 // Not valid. Invalid date of birth and place of birth code.
-mykad.isValid('561372-70-7953')
+isValid('561372-70-7953')
 
 ```
 
@@ -50,9 +44,9 @@ mykad.isValid('561372-70-7953')
 MyKad numbers can be formatted to either have dash or without. Note that this simply formats without validation (date/place of birth code). You can use isValid() if you need to check for validity.
 
 #### Format
-```javascript
+```ts
 try {
-    const formatted = mykad.format('111013018934');
+    const formatted = format('111013018934');
     console.log(formatted); // 111013-01-8934
 } catch (error) {
     throw error; // Input error
@@ -62,7 +56,7 @@ try {
 #### Unformat
 ```javascript
 try {
-    const unformatted = mykad.unformat('111013-01-8934');
+    const unformatted = unformat('111013-01-8934');
     console.log(unformatted); // 111013018934
 } catch (error) {
     throw error; // Input error
@@ -82,9 +76,9 @@ console.log(randomIcNum);
 
 MyKad numbers contain information about the holder's date of birth, place of birth, and gender. Date of birth assumes the age is under 100 years old. For example, the birth year '12' is 2012 instead of 1912.
 
-```javascript
+```ts
 try {
-    const data = mykad.parse('890724-01-2498');
+    const data = parse('890724-01-2498');
     console.log(data);
 } catch (error) {
     throw error;
@@ -93,7 +87,7 @@ try {
 
 Parsed data is as the following:
 
-```javascript
+```ts
 {
     birthDate: new Date(1989, 6, 24),
     birthPlace: { region: 'SOUTHEAST_ASIA', country: 'MY', state: 'JHR' },
