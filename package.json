@@ -1,6 +1,6 @@
 {
   "name": "@socoe/mykad",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Library to validate, parse, generate, and format Malaysian identity card (MyKad) numbers",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
