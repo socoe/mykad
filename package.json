@@ -1,12 +1,14 @@
 {
-  "name": "mykad",
+  "name": "@socoe/mykad",
   "version": "2.0.1",
   "description": "Library to validate, parse, generate, and format Malaysian identity card (MyKad) numbers",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "npm run build && mocha",
-    "build": "npx babel src --presets @babel/preset-env --out-dir dist",
+    "build": "npx babel src --presets @babel/preset-env --out-dir dist && cp src/index.d.ts dist/",
     "prepublish": "npm run build",
+    "publish": "npm publish --scope=@socoe --access=public",
     "bundle": "npm run build && node ./node_modules/browserify/bin/cmd.js dist/index.js --standalone mykad -o browser/mykad.js && node ./node_modules/uglify-js/bin/uglifyjs --output browser/mykad.min.js --compress --mangle -- browser/mykad.js"
   },
   "repository": {
